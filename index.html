@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>PhotoMath</title>
+    <meta name="description" content="Een tool om foto's te bewerken voor het ProfielWerkStuk van Rona en Isa.">
+    <meta property="og:title" content="PhotoMath">
+    <meta property="og:site_name" content="PhotoMath">
+    <meta property="og:url" content="https://localhost:8000">
+    <meta property="og:image" content="https://pbnify.com/images/logo-post.png">
+    <meta property="og:description" content="Een tool om foto's te bewerken voor het ProfielWerkStuk van Rona en Isa.">
+    <meta property="og:type" content="website">
+
+    <meta name="viewport" content="width=device-width">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styles/main.css">
+
+  </head>
+  <body ng-app="pbnApp">
+
+    <div class="container">
+      <div class="col" id="header">
+	<img id="title" src="images/logo-02.png" alt="PBNify">
+	<div id="subtitle">Toolbox voor het ProfielWerkStuk van Rona en Isa</div>
+      </div>
+
+      <div ng-include="'views/main.html'" ng-controller="MainCtrl"></div>
+
+      <div ng-if="false">
+  Je browser moet het gebruik van Javascipt ondersteunen, omdat het
+  bewerken van de plaatjes allemaal lokaal gebeurt in je eigen browser.
+      </div>
+    </div>
+
+    <div class="container" id="footer">
+      <p>
+	      Met dank aan Gijs de vader van Rona voor het maken van de software.
+      </p>
+
+      <p>
+        Gebaseerd op PBNify van Dan Munro.
+        Copyright 2020 Dan Munro under the <a target="_blank"
+					 href="https://directory.fsf.org/wiki/License:Expat">Expat license</a>.
+	      <a href="https://github.com/daniel-munro/pbnify" target="_blank">Source code.</a>
+      </p>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="scripts/lodash.js"></script>
+
+    <script src="scripts/app.js"></script>
+    <script src="scripts/controllers/main.js"></script>
+    <script src="scripts/directives/stage.js"></script>
+    <script src="scripts/directives/loadfile.js"></script>
+    <script src="scripts/createpallete.js"></script>
+    <script src="scripts/stats-utils.js"></script>
+    <script src="scripts/clustering.js"></script>
+  </body>
+</html>
